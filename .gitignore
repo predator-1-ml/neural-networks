@@ -89,3 +89,8 @@ ENV/
 .ropeproject
 
 seq2seq.ini
+working_dir/checkpoint
+working_dir/seq2seq.*
+working_dir/vocab*
+data/test*
+data/train*
