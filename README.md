@@ -1,5 +1,35 @@
-#Tensorflow Chatbot
-Tensorflow Chatbot Demo by @Sirajology on [Youtube](https://youtu.be/SJDEOWLHYVo)
+#rDany seq2seq implementation
+Joing rDany Development slack team (request invitation to rdany@rdany.org).
+
+Based on Tensorflow Chatbot Demo by @Sirajology on [Youtube](https://youtu.be/SJDEOWLHYVo)
+
+## Running rDany locally
+
+    mkdir rdany
+    cd rdany
+    git clone https://github.com/llSourcell/tensorflow_chatbot.git
+    virtualenv -p python2 venv
+    . venv/bin/activate
+    pip install numpy scipy six tensorflow==0.12
+
+Edit the file seq2seq.ini changing:
+
+    mode = test
+    enc_vocab_size = 6000
+    dec_vocab_size = 6000
+    num_layers = 2
+    layer_size = 128
+    batch_size = 16
+
+Ask for the last model on Slack
+Unzip the model file on the folder working_dir
+
+Finally run:
+
+    python execute.py
+
+Will take a moment to load and when a symbol `>` appear you can write.
+
 
 Overview
 ============
@@ -50,3 +80,4 @@ https://github.com/llSourcell/tensorflow_chatbot/issues/3
 Credits
 ===========
 Credit for the vast majority of code here goes to [suriyadeepan](https://github.com/suriyadeepan). I've merely created a wrapper to get people started. 
+
