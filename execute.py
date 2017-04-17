@@ -258,9 +258,7 @@ def decode():
             if not r:
                 print ("r error")
                 continue
-            print (r.text)
             if not "message_id" in r.json():
-                print ("no message")
                 continue
             #sentence = "_enc_rdany {0}".format(r.json()["message_text"])
             sentence = r.json()["message_text"]
@@ -307,7 +305,10 @@ def decode():
                 'message_id': r.json()["message_id"],
                 }
             print (post_data)
-            r = requests.post("https://rdanybot.rdany.org/api", data=json.dumps(post_data), headers=headers)
+            try:
+                r = requests.post("https://rdanybot.rdany.org/api", data=json.dumps(post_data), headers=headers)
+            except requests.exceptions.ConnectionError:
+                print ("ConnectionError")
             print (r.text)
 
 
