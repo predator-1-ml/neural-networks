@@ -88,9 +88,9 @@ ENV/
 # Rope project settings
 .ropeproject
 
-seq2seq.ini
-working_dir/checkpoint
-working_dir/seq2seq.*
-working_dir/vocab*
-data/test*
-data/train*
+seq2seq_siraj/seq2seq.ini
+seq2seq_siraj/working_dir/checkpoint
+seq2seq_siraj/working_dir/seq2seq.*
+seq2seq_siraj/working_dir/vocab*
+seq2seq_siraj/data/test*
+seq2seq_siraj/data/train*
